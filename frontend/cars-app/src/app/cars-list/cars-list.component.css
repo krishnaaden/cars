@@ -1,0 +1,20 @@
+main {
+  min-height: 80vh;
+}
+
+
+.car-card {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.car-card img {
+  max-width: 100%;
+}
+
+.mat-expansion-panel {
+  margin: 20px 10px;
+}

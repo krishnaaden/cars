@@ -1,0 +1,16 @@
+main {
+  min-height: 80vh;
+}
+
+.car-detail {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.car-detail img {
+  max-width: 100%;
+}

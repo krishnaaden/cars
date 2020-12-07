@@ -1,0 +1,29 @@
+<main class="container">
+  <h1>List of Cars</h1>
+  <select class="form-control" (change)="onQuarterChange($event.target.value)">
+    <option *ngFor="let quarter of quarters" [selected]="selectedQuarter==quarter.value" [value]="quarter.value">
+      {{quarter.value}}
+    </option>
+  </select>
+
+  <div *ngFor="let quarter of quarters">
+    <mat-accordion>
+      <mat-expansion-panel class="mat-exansion-panel" [expanded]="quarter.expanded">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Quarter: {{quarter.value}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="card-body row">
+          <div class="car-card col-md-3" *ngFor="let car of getCarsByQuarter(cars, quarter.value)" (click)="carClicked(car._id)">
+            <img [src]="car.img" alt="">
+            <h3 >{{car.name}}</h3>
+            <p>{{car.type}}</p>
+            <p>{{car.hp}}</p>
+            <p>{{car.year}}</p>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</main>

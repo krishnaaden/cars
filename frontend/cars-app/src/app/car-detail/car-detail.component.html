@@ -1,0 +1,15 @@
+<main class="container">
+  <div *ngIf="loading">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <div class="car-detail" *ngIf="car">
+    <img [src]="car.img" alt="">
+    <h1>{{car.name}}</h1>
+    <p>{{car.type}}</p>
+    <p>{{car.hp}}</p>
+    <p>{{car.quarter}}</p>
+    <p>{{car.year}}</p>
+  </div>
+</main>
